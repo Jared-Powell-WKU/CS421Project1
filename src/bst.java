@@ -30,17 +30,17 @@ public class bst {
         }
    }
 
-   public boolean find(int id) {
+   public student find(int id) {
        node current = root;
        while(current != null) {
            if(current.s.id == id)
-               return true;
+               return current.s;
            else if (current.s.id >= id)
                current = current.left;
            else
                current = current.right;
        }
-       return false;
+       return null;
    }
    public student findMinID() {
        node current = root;

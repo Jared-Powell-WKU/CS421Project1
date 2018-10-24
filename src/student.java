@@ -1,7 +1,12 @@
 
 public class student {
 
-    int id; // Student ID number
+    @Override
+	public String toString() {
+		return "student [id=" + id + ", name=" + name + ", gpa=" + gpa + "]  \n";
+	}
+
+	int id; // Student ID number
     String name; // Student's Name
     double gpa; // Student's GPA
     //Constructor
