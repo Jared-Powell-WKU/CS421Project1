@@ -30,6 +30,7 @@ public class cs421project1 {
             newStudent.print();
             tree.insert(newStudent);
         }
+        reader.close();
 
         //TODO: Create menu and incorporate AVL tree (I believe in you Stephen
 
