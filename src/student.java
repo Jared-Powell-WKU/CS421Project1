@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 public class student {
 
     int id; // Student ID number
@@ -13,7 +11,6 @@ public class student {
         this.name = name;
         this.gpa = gpa;
     }
-
     // Getters and Setters
     // Get to compare values to one another, Set in case of an update feature 
     // (primarily to GPA but I suppose some people change their names)
@@ -39,6 +36,21 @@ public class student {
 
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+
+    public void print() {
+        System.out.println("ID: " + this.id);
+        System.out.println("Name: " + this.name);
+        System.out.println("GPA: " + this.gpa);
+    }
+
+    public int compareTo(student s) {
+        if(this.id == s.id)
+            return 0;
+        else if(this.id > s.id)
+            return 1;
+        else
+            return -1;
     }
     // Any other class methods go here, I've only added the basics for starting out
 }
