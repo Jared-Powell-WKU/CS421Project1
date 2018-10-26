@@ -1,12 +1,11 @@
 
 public class student {
 
-    @Override
-	public String toString() {
-		return "student [id=" + id + ", name=" + name + ", gpa=" + gpa + "]  \n";
-	}
+    public String toString() {
+        return "student [ID: " + id + ", Name: " + name + ", GPA: " + gpa + "]  \n";
+    }
 
-	int id; // Student ID number
+    int id; // Student ID number
     String name; // Student's Name
     double gpa; // Student's GPA
     //Constructor
@@ -17,7 +16,7 @@ public class student {
         this.gpa = gpa;
     }
     // Getters and Setters
-    // Get to compare values to one another, Set in case of an update feature 
+    // Get to compare values to one another, Set in case of an update feature
     // (primarily to GPA but I suppose some people change their names)
     public int getId() {
         return id;
