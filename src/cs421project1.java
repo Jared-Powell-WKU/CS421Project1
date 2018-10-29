@@ -10,7 +10,7 @@ public class cs421project1 {
 
         bst tree = new bst();
         AVLTree avl = new AVLTree();
-        File file = new File("test1.txt");
+        File file = new File("test2.txt");
         int id;
         String name;
         double gpa;
@@ -35,8 +35,6 @@ public class cs421project1 {
             }
         }
 
-        //TODO: AVL tree (I believe in you Stephen
-        // System.out.println(tree.find(1));
         String choice = " ";
         Scanner input = new Scanner(System.in);
 
@@ -56,18 +54,19 @@ public class cs421project1 {
                 case "1":
                     System.out.println("What student id do you want to find? ");
                     int idSearch = input.nextInt();
-                    if (avl.search(idSearch)) {
-                        student foundStudent = tree.find(idSearch);
-                        student foundStudent2 = avl.find(idSearch);
-                        if (foundStudent != null) {
-                            System.out.println("BST Tree: " +foundStudent);
-                            System.out.println("Nodes BST tree traversed: " + tree.displayCount());
-                            
-                            System.out.println("AVL Tree: "+ foundStudent2);
-                            System.out.println("Nodes AVL tree traversed: " + avl.displayCount());
-                        }
+
+                    student foundStudent = tree.find(idSearch);
+                    student foundStudent2 = avl.find(idSearch);
+                    if (foundStudent != null || foundStudent2 != null) {
+                        System.out.println("BST Tree: " +foundStudent);
+                        System.out.println("Nodes BST tree traversed: " + tree.displayCount());
+
+                        System.out.println("AVL Tree: "+ foundStudent2);
+                        System.out.println("Nodes AVL tree traversed: " + avl.displayCount());
                     } else {
                         System.out.println("Could not find Student with id: " + idSearch);
+                        System.out.println("Nodes BST tree traversed: " + tree.displayCount());
+                        System.out.println("Nodes AVL tree traversed: " + avl.displayCount());
                     }
 
                     input.nextLine();
