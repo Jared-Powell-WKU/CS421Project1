@@ -34,6 +34,7 @@ public class bst {
     }
 
     public student find(int id) {
+  
         node current = root;
         while (current != null) {
             count++;
@@ -51,6 +52,7 @@ public class bst {
     public student findMinID() {
         node current = root;
         while (current.hasLeft()) {
+        	count++;
             current = current.left;
         }
         return current.s;
@@ -59,6 +61,7 @@ public class bst {
     public student findMaxID() {
         node current = root;
         while (current.hasRight()) {
+        	count++;
             current = current.right;
         }
         return current.s;

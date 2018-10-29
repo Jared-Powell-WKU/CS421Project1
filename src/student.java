@@ -2,7 +2,7 @@
 public class student {
 
     public String toString() {
-        return "student [ID: " + id + ", Name: " + name + ", GPA: " + gpa + "]  \n";
+        return "student [ID: " + id + ", Name: " + name + ", GPA: " + gpa + "]";
     }
 
     int id; // Student ID number

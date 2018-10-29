@@ -58,9 +58,12 @@ public class cs421project1 {
                     int idSearch = input.nextInt();
                     if (avl.search(idSearch)) {
                         student foundStudent = tree.find(idSearch);
+                        student foundStudent2 = avl.find(idSearch);
                         if (foundStudent != null) {
-                            System.out.println(foundStudent);
+                            System.out.println("BST Tree: " +foundStudent);
                             System.out.println("Nodes BST tree traversed: " + tree.displayCount());
+                            
+                            System.out.println("AVL Tree: "+ foundStudent2);
                             System.out.println("Nodes AVL tree traversed: " + avl.displayCount());
                         }
                     } else {
@@ -73,13 +76,25 @@ public class cs421project1 {
                 //Min Option
                 case "2":
                     student testStudent = tree.findMinID();
-                    System.out.print("Min ID Student: " + testStudent);
+                    student testStudent2 = avl.findMinID();
+                    System.out.println("BST Min ID Student: " + testStudent);
+                    System.out.println("Nodes BST tree traversed: " + tree.displayCount());
+                    
+                    System.out.println("AVL Min ID Student: " + testStudent2);
+                    System.out.println("Nodes AVL tree traversed: " + avl.displayCount() + "\n");
+                
                     break;
 
                 //Max Option
                 case "3":
-                    student testStudent1 = tree.findMaxID();
-                    System.out.print("Max ID Student: " + testStudent1);
+                	student maxStudent = tree.findMaxID();
+                    student maxStudent2 = avl.findMaxID();
+                    System.out.println("BST Max ID Student: " + maxStudent);
+                    System.out.println("Nodes BST tree traversed: " + tree.displayCount());
+                    
+                    System.out.println("AVL Max ID Student: " + maxStudent2);
+                    System.out.println("Nodes AVL tree traversed: " + avl.displayCount() + "\n");
+                
                     break;
                 case "exit":
                     System.out.println("Good-bye");

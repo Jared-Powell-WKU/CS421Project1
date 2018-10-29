@@ -27,6 +27,21 @@
          height = 0;
 
      }
+
+
+
+     public boolean hasLeft() {
+         if(this.left != null)
+             return true;
+         else
+             return false;
+     }
+     public boolean hasRight() {
+         if(this.right != null)
+             return true;
+         else
+             return false;
+     }
  }
 
  
@@ -404,6 +419,39 @@
          int temp = this.count;
          this.count = 0;
          return temp;
+     }
+     public student find(int id) {
+         AVLNode current = root;
+         while (current != null) {
+             count++;
+             if (current.data.id == id) {
+                 return current.data;
+             } else if (current.data.id >= id) {
+                 current = current.left;
+             } else {
+                 current = current.right;
+             }
+         }
+         return null;
+     }
+
+     public student findMinID() {
+         AVLNode current = root;
+         while (current.hasLeft()) {
+        	 count++;
+             current = current.left;
+         }
+         return current.data;
+     }
+
+     public student findMaxID() {
+         AVLNode current = root;
+         while (current.hasRight()) {
+        	 count++;
+             current = current.right;
+         }
+         return current.data;
+         
      }
 
  }
