@@ -1,3 +1,4 @@
+// Creates nodes for BST that consist of student value and the ability to add children
 public class node {
     student s;
     node left;
@@ -7,7 +8,7 @@ public class node {
         left = null;
         right = null;
     }
-
+    // Boolean operators for checking for null children
     public boolean hasLeft() {
         if(this.left != null)
             return true;
